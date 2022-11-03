@@ -32,7 +32,7 @@ $(function() {
     console.log("execute!");
 
     var pathArray = window.location.pathname.split('/');
-    let siteId = parseInt(pathArray[2]);
+    let siteId = parseInt(pathArray[pathArray.length-1]);
     
     fetch("https://supersead.humlab.umu.se/jsonapi/ecocodes/site/"+siteId).then((response) => response.json()).then(data => {
 
