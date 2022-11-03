@@ -52,8 +52,10 @@ $(function() {
 });
 
 function render(cards, values) {
+    console.log(cards, values);
     let labels = ["Cards"];
     let parents = [""];
+    values.unshift(0);
 
     cards.forEach(c => {
         labels.push(c);
@@ -79,6 +81,7 @@ function render(cards, values) {
     $("#treemap-container-overlay").css("height", $("#treemap-container").height()+"px");
 
     slices.each((index, el) => {
+        console.log(index, el)
         if(index > 0) {
             let blockPos = $("path", el).position();
             let imageNode = $("<div class='card-image'></div>");
@@ -91,7 +94,11 @@ function render(cards, values) {
             
             let ecocode = $("text", el).text();
             let imageFile = "/"+ecocode+".png";
-            $(imageNode).css("background-image", 'url('+imageFile+')');
+            let path = "";
+            if(window.location.hostname != "localhost") {
+                path = "/sead/";
+            }
+            $(imageNode).css("background-image", 'url('+path+imageFile+')');
             let ecocodeName = ecocode.replace(/_/g, " ");
             $(imageNode).append("<div class='image-text'>"+ecocodeName+"</div>");
             $("#treemap-container-overlay").append(imageNode);    
