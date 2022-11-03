@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&display=swap');
+
+body {
+    margin:0;
+}
+
+.svg-container svg {
+    background-color: transparent !important;
+    visibility: hidden;
+}
+
+#treemap-container {
+    border: 0px solid #ccc;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/unsplash4.png');
+    background-origin: content-box;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#treemap-container-overlay {
+    position: absolute;
+    background: rgba(255, 0, 0, 0.0);
+    visibility: visible;
+}
+
+.card-image {
+    position: absolute;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1em;
+    height: 1em;
+    padding:0;
+    margin:0;
+    border-radius: 1em;
+    box-shadow: 0em 0em .5em .5em rgba(0, 0, 0, 0.35);
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.image-text {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    overflow:hidden;
+    font-family: 'Bodoni Moda', serif;
+    font-size: 0.8em;
+    border-radius: 0 0 1em 1em;
+    /*padding-left: 1em;*/
+    text-align: center;
+}
+
+/*
+#treemap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    width: auto;
+    height: auto;
+}
+
+#treemap-container > div {
+    display: block;
+    width: 10em;
+    height: 5em;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+}
+*/
